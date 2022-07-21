@@ -1,0 +1,24 @@
+{{define "title"}}
+<title>About Page</title>
+{{end}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>About page works no cache</h1>
+                <br>
+                <a href="/">Home Page</a>
+                {{ if ne (index .StringMap "remote_ip") ""}}
+                    <h3>remote ip {{ index .StringMap "remote_ip" }}</h3>
+                {{else}}
+                    <h3>No Ip on Record</h3>
+                {{end}}
+            </div>
+        </div>
+    </div>
+{{end}}
+
+{{define "js"}}
+
+{{end}}
